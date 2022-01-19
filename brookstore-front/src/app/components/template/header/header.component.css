@@ -1,11 +1,11 @@
 img{
-    height: 3rem;
+    height: 5rem;
 }
 
 h1{
     padding-left: 1.5rem;
     color: #B0E0E6;
-    font-size: 36px;
+    font-size: 46px;
 
 }
 
@@ -15,5 +15,6 @@ span{
 
 .header{
     justify-content: center;
-    height: 10%;
+    height: 15%;
+    background-color: black;
 }

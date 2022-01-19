@@ -1,0 +1,10 @@
+.footer{
+    position: fixed;
+    bottom: 0%;
+    justify-content: flex-end;
+    background-color: black;
+}
+h1{
+    color: #B0E0E6  ;
+    font-size: 1rem;
+}
