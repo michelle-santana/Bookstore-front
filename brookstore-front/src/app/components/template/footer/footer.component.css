@@ -2,9 +2,9 @@
     position: fixed;
     bottom: 0%;
     justify-content: flex-end;
-    background-color: black;
+    height: 5%;
 }
 h1{
-    color: #B0E0E6  ;
-    font-size: 1rem;
+    color: #DCDCDC ;
+    font-size: 0.8rem;
 }
