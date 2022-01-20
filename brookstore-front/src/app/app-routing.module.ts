@@ -1,12 +1,17 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { CategoriaReadComponent } from "./components/views/categoria/categoria-read/categoria-read.component";
 import { HomeComponent } from "./components/views/home/home.component";
 
 const routes: Routes = [
   {
     path: "",
-    component: HomeComponent,
+    component: HomeComponent
   },
+  {
+    path: "categorias",
+    component: CategoriaReadComponent
+  }
 ];
 
 @NgModule({
