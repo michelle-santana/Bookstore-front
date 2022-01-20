@@ -19,7 +19,7 @@ const routes: Routes = [
     component: CategoriaCreateComponent
   },
   {
-    path: "categorias/delete/:id",
+    path: 'categorias/delete/:id',
     component: CategoriaDeleteComponent
   }
 ];

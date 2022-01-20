@@ -16,18 +16,18 @@ export class CategoriaService {
 
    }
 
+   //lista as categorias do backend por id
+  findById(id: String): Observable<Categoria> {
+    const url = `${this.baseUrl}/categorias/${id}`
+    return this.http.get<Categoria>(url)
+  }
+
    //lista todas as categorias do backend
   findAll(): Observable<Categoria[]> {
     const url = `${this.baseUrl}/categorias`
     return this.http.get<Categoria[]>(url)
   }
 
-  //lista as categorias do backend por id
-  findById(id: String): Observable<Categoria>{
-    const url = `${this.baseUrl}/categorias/${id}`
-    return this.http.get<Categoria>(url)
-
-  }
 
   //criação da categoria no backend
  create(categoria: Categoria): Observable<Categoria>{
@@ -35,13 +35,24 @@ export class CategoriaService {
   return this.http.post<Categoria>(url, categoria);
 }
 
+//responsavel por deletar
+delete(id: String):Observable<void> {
+  const url = `${this.baseUrl}/categorias/${id}`
+  return this.http.delete<void>(url)
+}
+
+
+
+
 //responsavel pela mensagem
 message(str: String): void{
-this._snack.open(`${str}`, 'OK', {
-horizontalPosition: 'end',
-verticalPosition: 'top',
-duration: 30000
-})
-}
+  this._snack.open(`${str}`, 'OK', {
+  horizontalPosition: 'end',
+  verticalPosition: 'top',
+  duration: 30000
+  })
+  }
+
+
 
 }

@@ -10,16 +10,14 @@ import { CategoriaService } from '../categoria.service';
 })
 export class CategoriaDeleteComponent implements OnInit {
 
-  categoria : Categoria = {
-
-    id:"",
-    name: "",
-    description: ""
+  categoria: Categoria = {
+    id: '',
+    name: '',
+    description: ''
   }
 
-  constructor(private service: CategoriaService, private route : ActivatedRoute, private router : Router) { }
+  constructor(private service: CategoriaService, private route: ActivatedRoute, private router: Router) { }
 
-  
   ngOnInit(): void {
     this.categoria.id = this.route.snapshot.paramMap.get('id')!
     this.findById()
@@ -32,18 +30,17 @@ export class CategoriaDeleteComponent implements OnInit {
     })
   }
 
-  // delete(): void {
-  //   this.service.delete(this.categoria.id!).subscribe((resposta) => {
-  //     this.router.navigate(['categorias'])
-  //     this.service.message('Categoria deletada com sucesso!')
-  //   }, err => {
-  //     this.service.message(err.error.error)
-  //   })
-  // }
+  delete(): void {
+    this.service.delete(this.categoria.id!).subscribe((resposta) => {
+      this.router.navigate(['categorias'])
+      this.service.message('Categoria deletada com sucesso!')
+    }, err => {
+      this.service.message(err.error.error)
+    })
+  }
 
   cancel(): void {
     this.router.navigate(['categorias'])
   }
-
 
 }
