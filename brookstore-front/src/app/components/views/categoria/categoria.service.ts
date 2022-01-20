@@ -22,6 +22,13 @@ export class CategoriaService {
     return this.http.get<Categoria[]>(url)
   }
 
+  //lista as categorias do backend por id
+  findById(id: String): Observable<Categoria>{
+    const url = `${this.baseUrl}/categorias/${id}`
+    return this.http.get<Categoria>(url)
+
+  }
+
   //criação da categoria no backend
  create(categoria: Categoria): Observable<Categoria>{
   const url = `${this.baseUrl}/categorias`
