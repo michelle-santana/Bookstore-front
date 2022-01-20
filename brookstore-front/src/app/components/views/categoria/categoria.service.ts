@@ -41,7 +41,11 @@ delete(id: String):Observable<void> {
   return this.http.delete<void>(url)
 }
 
-
+//responsavel por atualizar no backend
+update(categoria: Categoria):Observable<void> {
+  const url = `${this.baseUrl}/categorias/${categoria.id}`
+  return this.http.put<void>(url, categoria)
+}
 
 
 //responsavel pela mensagem
