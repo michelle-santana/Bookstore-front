@@ -47,7 +47,6 @@ update(categoria: Categoria):Observable<void> {
   return this.http.put<void>(url, categoria)
 }
 
-
 //responsavel pela mensagem
 message(str: String): void{
   this._snack.open(`${str}`, 'OK', {
