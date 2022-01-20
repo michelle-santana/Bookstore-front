@@ -4,7 +4,7 @@ img{
 
 h1{
     padding-left: 1.5rem;
-    color: #B0E0E6;
+    color: #696969;
     font-size: 33px;
 
 }
@@ -16,4 +16,5 @@ span{
 .header{
     justify-content: center;
     height: 10%;
+   background: #B0E0E6;
 }

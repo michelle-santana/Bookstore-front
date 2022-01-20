@@ -3,8 +3,9 @@
     bottom: 0%;
     justify-content: flex-end;
     height: 5%;
+    background: #B0E0E6;
 }
 h1{
-    color: #DCDCDC ;
+    color: #696969 ;
     font-size: 0.8rem;
 }
