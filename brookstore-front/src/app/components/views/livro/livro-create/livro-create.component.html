@@ -3,21 +3,24 @@
 
     <mat-form-field class="form">
         <mat-label>Title</mat-label>
-        <input matInput  type="text" name="title" placeholder="Ex. Crespusculo" maxlength="100">
+        <input matInput [formControl]="title" required type="text" name="title" placeholder="Ex. Crespusculo" maxlength="100">
+    <mat-error *ngIf="title.invalid">{{ getMessage() }}</mat-error>
     </mat-form-field>
 
     <mat-form-field class="form">
-        <mat-label>Author </mat-label>
-        <input matInput  type="text" name="author" placeholder="Ex. Michelle Santana" maxlength="100">
+        <mat-label>Author</mat-label>
+        <input matInput [formControl]="author" required type="text" name="author" placeholder="Ex. Michelle Santana" maxlength="100">
+        <mat-error *ngIf="author.invalid">{{ getMessage() }}</mat-error>
     </mat-form-field>
 
     <mat-form-field class="form">
         <mat-label>Text </mat-label>
-        <textarea matInput  type="text" name="text" placeholder="Ex. lorem ipsum lorem ipsum" maxlength="2000000"></textarea>
+        <textarea matInput [formControl]="text" required type="text" name="text" placeholder="Ex. lorem ipsum lorem ipsum" maxlength="2000000"></textarea>
+        <mat-error *ngIf="text.invalid">{{ getMessage() }}</mat-error>
     </mat-form-field>
 
     <div class="buttons">
-        <button  class="mat-elevation-z8" mat-stroked-button color="primary"> CRIAR </button>
+        <button [disabled]="getMessage()" class="mat-elevation-z8" mat-stroked-button color="primary"> CRIAR </button>
         <button  class="mat-elevation-z8" mat-stroked-button color="warn"> CANCELAR </button>
     </div>
 
